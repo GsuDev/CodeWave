@@ -16,6 +16,10 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: #f2de8d;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
 }
 
 nav li {
