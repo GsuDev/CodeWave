@@ -8,6 +8,92 @@
     <script src="resources/script.js"></script>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="index.html"><img src="resources/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="https://github.com/CodeWaveDev/CodeWave">Github</a></li>
+                <li><a href="https://github.com/CodeWaveDev/CodeWave/issues/new">Reportar error</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <ul>
+                <li><img src="resources/languages/c.png" alt="C" class="language-icon">C</li>
+                <li><img src="resources/languages/cpp.png" alt="C++" class="language-icon">C++</li>
+                <li><img src="resources/languages/java.png" alt="Java" class="language-icon">Java</li>
+                <li><img src="resources/languages/javascript.png" alt="JavaScript" class="language-icon">JavaScript</li>
+                <li><img src="resources/languages/python.png" alt="Python" class="language-icon">Python</li>
+                <li><img src="resources/languages/php.png" alt="PHP" class="language-icon">PHP</li>
+            </ul>
+        </aside>
+        <section>
+            <ul class="snippets-list">
+                <li class="snippet">
+                    <div class="snippet-code">
+                        <code class="language-c">/* C snippet */</code>
+                    </div>
+                    <div class="snippet-actions">
+                        <button class="snippet-action">Copiar</button>
+                        <button class="snippet-action">Eliminar</button>
+                    </div>
+                </li>
+                <li class="snippet">
+                    <div class="snippet-code">
+                        <code class="language-cpp">/* C++ snippet */</code>
+                    </div>
+                    <div class="snippet-actions">
+                        <button class="snippet-action">Copiar</button>
+                        <button class="snippet-action">Eliminar</button>
+                    </div>
+                </li>
+                <li class="snippet">
+                    <div class="snippet-code">
+                        <code class="language-java">/* Java snippet */</code>
+                    </div>
+                    <div class="snippet-actions">
+                        <button class="snippet-action">Copiar</button>
+                        <button class="snippet-action">Eliminar</button>
+                    </div>
+                </li>
+                <li class="snippet">
+                    <div class="snippet-code">
+                        <code class="language-javascript">/* JavaScript snippet */</code>
+                    </div>
+                    <div class="snippet-actions">
+                        <button class="snippet-action">Copiar</button>
+                        <button class="snippet-action">Eliminar</button>
+                    </div>
+                </li>
+                <li class="snippet">
+                    <div class="snippet-code">
+                        <code class="language-python">/* Python snippet */</code>
+                    </div>
+                    <div class="snippet-actions">
+                        <button class="snippet-action">Copiar</button>
+                        <button class="snippet-action">Eliminar</button>
+                    </div>
+                </li>
+                <li class="snippet">
+                    <div class="snippet-code">
+                        <code class="language-php">/* PHP snippet */</code>
+                    </div>
+                    <div class="snippet-actions">
+                        <button class="snippet-action">Copiar</button>
+                        <button class="snippet-action">Eliminar</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        document.querySelectorAll('.snippet-code code').forEach(function(code) {
+            var textarea = document.createElement('textarea');
+            textarea.value = code.textContent;
+            code.parentNode.replaceChild(textarea, code);
+        });
+    </script>
 </body>
+    <script src="resources/script.js"></script>
 </html>
