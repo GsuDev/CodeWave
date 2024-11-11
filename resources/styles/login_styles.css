@@ -1,29 +1,32 @@
 /*Estilos para el formulario del login*/
 body{
-    background-color:#212121 ;
+  background-color:#212121 ;
+}
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .form {
     display: flex;
     flex-direction: column;
+    width: 25vw;
+    height: 55vh;
     gap: 10px;
     padding-left: 2em;
     padding-right: 2em;
     padding-bottom: 0.4em;
     background-color: #171717;
     border-radius: 25px;
-    transition: .4s ease-in-out;
-    width: 25vw;
-    height: 55vh;
-    margin-top:9em ;
-    margin-left: 28em;
 }
   /*Al pasar por encima del formulario*/*/
-  .form:hover {
+.form:hover {
     transform: scale(1.05);
     border: 1px solid black;
 }
    /*Header del formulario*/
-  #heading {
+#heading {
     text-align: center;
     margin: 2em;
     color: rgb(255, 255, 255);
@@ -50,7 +53,7 @@ body{
     fill: white;
 }
   /*Linea que sale al escribir encima de UserName y Password*/
-  .input-field {
+.input-field {
     background: none;
     border: none;
     outline: none;
@@ -58,14 +61,14 @@ body{
     color: #d3d3d3;
 }
   
-  .form .btn {
+.form .btn {
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin-top: 2.5em;
 }
   /*Botón de login*/
-  .button1 {
+.button1 {
     padding: 0.5em;
     padding-left: 1.1em;
     padding-right: 1.1em;
@@ -78,12 +81,12 @@ body{
     color: white;
 }
   
-  .button1:hover {
+.button1:hover {
     background-color: black;
     color: white;
 }
   /*Boton de Sign Up*/
-  .button2 {
+.button2 {
     padding: 0.5em;
     padding-left: 2.3em;
     padding-right: 2.3em;
