@@ -26,10 +26,11 @@ header nav {
     align-items: center;
 }
 
-header nav a {
+header nav a img{
     color: #fff;
     text-decoration: none;
-    margin-left: 10px;
+    width: 2vw;
+    height: 4vh;
 }
 
 header nav a:hover {
