@@ -5,7 +5,7 @@ window.addEventListener('resize', function() {
     const width = window.innerWidth;
     const height = window.innerHeight;
 
-    if (width < 900) { // Change 600 to your desired breakpoint
+    if (width < 1100) { // Change 600 to your desired breakpoint
         logo.style.position = 'absolute';
         logo.style.top = '10px'; // Adjust as needed
         logo.style.left = '50%';
@@ -25,7 +25,7 @@ window.addEventListener('resize', function() {
     }else {
         form.style.height = '50vh';
     }
-    if (width < 1400) { // Change 600 to your desired breakpoint
+    if (width < 1100) { // Change 600 to your desired breakpoint
         form.style.width = '70vw';
     }else {
         form.style.width = '20vw';
