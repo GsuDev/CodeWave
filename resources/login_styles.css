@@ -18,7 +18,7 @@ body{
     margin-left: 28em;
 }
   /*Al pasar por encima del formulario*/*/
-  .form:hover {
+.form:hover {
     transform: scale(1.05);
     border: 1px solid black;
 }
