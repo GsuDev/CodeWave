@@ -1,4 +1,7 @@
 /*Estilos para el formulario del login*/
+body{
+    background-color:#212121 ;
+}
 .form {
     display: flex;
     flex-direction: column;
@@ -9,20 +12,24 @@
     background-color: #171717;
     border-radius: 25px;
     transition: .4s ease-in-out;
+    width: 25vw;
+    height: 55vh;
+    margin-top:9em ;
+    margin-left: 28em;
 }
   /*Al pasar por encima del formulario*/*/
   .form:hover {
     transform: scale(1.05);
     border: 1px solid black;
-  }
-  /*Header del formulario*/
-#heading {
+}
+   /*Header del formulario*/
+  #heading {
     text-align: center;
     margin: 2em;
     color: rgb(255, 255, 255);
     font-size: 1.2em;
 }
-  
+  /*Botón de UserName y password*/
   .field {
     display: flex;
     align-items: center;
@@ -33,31 +40,31 @@
     border: none;
     outline: none;
     color: white;
-    background-color: #171717;
+    background-color:#171717;
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-  }
-  
+}
+  /*Símbolo de "@" y "candado"*/
   .input-icon {
     height: 1.3em;
     width: 1.3em;
     fill: white;
-  }
-  
+}
+  /*Linea que sale al escribir encima de UserName y Password*/
   .input-field {
     background: none;
     border: none;
     outline: none;
     width: 100%;
     color: #d3d3d3;
-  }
+}
   
   .form .btn {
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin-top: 2.5em;
-  }
-  
+}
+  /*Botón de login*/
   .button1 {
     padding: 0.5em;
     padding-left: 1.1em;
@@ -69,13 +76,13 @@
     transition: .4s ease-in-out;
     background-color: #252525;
     color: white;
-  }
+}
   
   .button1:hover {
     background-color: black;
     color: white;
-  }
-  
+}
+  /*Boton de Sign Up*/
   .button2 {
     padding: 0.5em;
     padding-left: 2.3em;
@@ -86,13 +93,13 @@
     transition: .4s ease-in-out;
     background-color: #252525;
     color: white;
-  }
+}
   
   .button2:hover {
     background-color: black;
     color: white;
-  }
-  
+}
+  /*Forgot Password*/
   .button3 {
     margin-bottom: 3em;
     padding: 0.5em;
@@ -102,9 +109,9 @@
     transition: .4s ease-in-out;
     background-color: #252525;
     color: white;
-  }
+}
   
   .button3:hover {
     background-color: red;
     color: white;
-  }
+}
