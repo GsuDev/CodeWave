@@ -4,17 +4,16 @@ window.addEventListener('resize', function() {
     const form = document.querySelector('.form');
     const width = window.innerWidth;
     const height = window.innerHeight;
-
-    if (width < 1100) { // Change 600 to your desired breakpoint
+    if (width < 900) { // Change 600 to your desired breakpoint
         logo.style.position = 'absolute';
-        logo.style.top = '10px'; // Adjust as needed
+        logo.style.top = '7vh'; // Adjust as needed
         logo.style.left = '50%';
         logo.style.transform = 'translateX(-50%)';
-        logoImg.style.width = '40vw';
+        logoImg.style.width = 'calc(90vw - 40vw)';
     } else {
         // Reset styles for larger screens
         logo.style.position = '';
-        logo.style.top = '';
+        logo.style.top = '7vh';
         logo.style.left = '5vw';
         logo.style.transform = '';
         logoImg.style.width = '10vw';
@@ -25,9 +24,9 @@ window.addEventListener('resize', function() {
     }else {
         form.style.height = '50vh';
     }
-    if (width < 1100) { // Change 600 to your desired breakpoint
+    if (width < 900) { // Change 600 to your desired breakpoint
         form.style.width = '70vw';
     }else {
         form.style.width = '20vw';
     }
-})
+});
