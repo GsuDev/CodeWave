@@ -115,6 +115,7 @@ body {
 	background-color: #171717;
 	color: white;
 	cursor: pointer;
+	transform: translate(0%, 13%); /*Agregamos un desplazamiento vertical de 10%, para que el icono se vea centrado*/
 }
 
 /*Caja de texto interna de los campos de contraseña y usuario*/
