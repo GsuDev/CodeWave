@@ -2,3 +2,8 @@
     font-family: 'Inter';
     src: url();
 }
+/*Fuente del logo*/
+@font-face {
+	font-family: 'Urbanist';
+	src: url(../fonts/Urbanist-VariableFont_wght.ttf);
+}
