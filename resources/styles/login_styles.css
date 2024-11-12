@@ -1,46 +1,66 @@
 /*Estilos para el formulario del login*/
+
+/*Fuente Inter para el login*/
 @font-face {
 	font-family: 'Inter';
 	src: url(../fonts/Inter-VariableFont_opsz,wght.ttf);
 }
 
 body {
-	background-color: #212121;
-	width: 98vw;
-	height: 97vh;
-	position: relative;
-	font-family: 'Inter';
+	/*background-color: #212121;*/ /*Color de fondo: No necesario porque lo cambiamos con la animacion*/
+	width: 100vw; /*Tamaño de la pantalla de login*/
+	height: 100vh;
+	margin: 0; /*Reseteamos el margen por defecto para que no nos moleste*/
+	padding: 0; /*Reseteamos el padding por defecto para que no nos moleste*/
+	font-family: 'Inter'; /*Fuente del login*/
+	overflow: hidden; /*Para que no se muestre el scroll en la pantalla de login en alguna resolucion concreta*/
 }
 
+/*Estilos para el boton del logo de arriba a la derecha*/
+
+/*Contenedor del logo de arriba a la derecha*/
 .imagenLogo {
 	position: absolute;
 	top: 7vh;
 	left: 5vw;
 }
 
+/*Logo de arriba a la derecha*/
 .imagenLogo img {
 	width: 10vw;
 	transition: all 0.3s ease-in-out;
 
 }
 
+/*Animacion del logo de arriba a la derecha*/
 .imagenLogo img:hover {
-	transform: scale(1.05);
+	transform: scale(1.05); /*Escala el logo un 5% al pasar el raton por encima*/
+	cursor: pointer; /*Cambia el cursor al pasar el raton por encima*/
 }
 
+
+/*Estilos para el formulario de login*/
+
+/*Contenedor exterior del formulario de login*/
 .form-container {
+	/*centramos el div del formulario*/
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
+/*Caja interior del formulario de login*/
 .form {
+	/*Utilizamos flexbox column para centrar los elementos del formulario*/
 	display: flex;
 	flex-direction: column;
+	/*Le damos medidas a la caja que posteriormente moveremos con JS*/
 	width: 20vw;
 	height: 50vh;
+	/*Hueco entre las cajas, los botones etc. Es el hueco vertical ej.: el espacio entre la caja user y la password*/
 	gap: 10px;
+	/*Damos padding a la caja para respetar la estetica (la unidad em es relativa al tamaño heredado de la fuente)*/
 	padding-left: 2em;
 	padding-right: 2em;
 	padding-bottom: 0.4em;
@@ -54,7 +74,7 @@ body {
 	border: 1px solid black;
 }*/
 
-/*Header del formulario*/
+/*Texto "Login" de arriba del formulario*/
 #heading {
 	text-align: center;
 	margin: 1.6em;
@@ -62,19 +82,23 @@ body {
 	font-size: 1.6em;
 }
 
-/*Botón de UserName y password*/
+/*Estilo de las cajas para UserName y password*/
 .field {
+	/*Utilizamos flexbox para centrar los elementos de cada caja*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 0.5em;
-	border-radius: 25px;
+	border-radius: 25px; /*Redondeamos las esquinas de la caja*/
 	padding: 0.6em;
+
+	/*Quitamos los bordes y el outline por defecto en la caja para que los input no tengan borde ni outline*/
 	border: none;
 	outline: none;
-	color: white;
-	background-color: #171717;
-	box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+
+	color: white; /*Color de texto y del placeholder*/
+	background-color: #171717; /*Color del fondo de las cajas*/
+	box-shadow: inset 2px 5px 10px rgb(5, 5, 5); /*Sombra interna de las cajas*/
 }
 
 /*Símbolo de "@" y "candado"*/
@@ -84,15 +108,18 @@ body {
 	fill: white;
 }
 
+/*Icono del boton de revelado de la contraseña*/
 .eye{
+	/*Quitamos los estilos por defecto de button*/
 	border: 0;
 	background-color: #171717;
 	color: white;
 	cursor: pointer;
 }
 
-/*Que no salga borde al escribir encima de UserName y Password*/
+/*Caja de texto interna de los campos de contraseña y usuario*/
 .input-field {
+	/*Quitamos los estilos por defecto de input*/
 	background: none;
 	border: none;
 	outline: none;
@@ -100,7 +127,8 @@ body {
 	color: #d3d3d3;
 }
 
-
+/*Estilo de los botones de login y sign up*/
+/*Contenedor de los botones*/
 .form .btn {
 	display: flex;
 	justify-content: center;
@@ -108,64 +136,85 @@ body {
 	margin-top: 2.5em;
 }
 
-/*Botón de login*/
+/*Estilos para el botón de login*/
 .button1 {
+	/*Agregamos padding al los boton acorde con lo que mide la palabra (la unidad "em" es relativa al tamaño heredado de la fuente)*/
 	padding: 0.5em;
 	padding-left: 1.1em;
 	padding-right: 1.1em;
 	border-radius: 5px;
 	margin-right: 0.5em;
+	/*Quitamos el border y el outline por defecto de button*/
 	border: none;
 	outline: none;
+	/*Agregamos la transicion de color al botón ya que si este estilo lo ponemos en hover solo funciona cuando pones el raton encima y al quitarlo no hace el transition*/
 	transition: .4s ease-in-out;
+	/*Establecemos el color de fondo y el color del texto*/
 	background-color: #252525;
 	color: white;
+	/*Establecemos el ancho del botón*/
 	width: 15em;
 }
 
+/*Estilo del boton de "login" al pasar el ratón por encima*/
 .button1:hover {
 	background-color: #569cd6;
-	color: white;
+	color: white; /*FIXME Redundante porque la fuente ya es blanca antes del hover*/
 }
 
-/*Boton de Sign Up*/
+/*Boton de "Sign Up"*/
 .button2 {
+	/*Agregamos padding al los boton acorde con lo que mide la palabra (la unidad "em" es relativa al tamaño heredado de la fuente)*/
 	padding: 0.5em;
 	padding-left: 2.3em;
 	padding-right: 2.3em;
 	border-radius: 5px;
+	/*Quitamos el border y el outline por defecto de button*/
 	border: none;
 	outline: none;
+	/*Agregamos la transicion de color al botón ya que si este estilo lo ponemos en hover solo funciona cuando pones el raton encima y al quitarlo no hace el transition*/
 	transition: .4s ease-in-out;
+	/*Establecemos el color de fondo y el color del texto*/
 	background-color: #252525;
 	color: white;
+	/*Establecemos el ancho del botón*/
 	width: 15em;
-
 }
 
+/*Estilo del boton de "Sign Up" al pasar el ratón por encima*/
 .button2:hover {
 	background-color: #f29f05;
-	color: white;
+	color: white; /*FIXME Redundante porque la fuente ya es blanca antes del hover*/
 }
 
-/*Forgot Password*/
+/*Boton de "Forgot Password" (No tiene caja)*/
 .button3 {
 	margin-top: 0.5em;
 	padding: 0.5em;
 	border-radius: 5px;
+	/*Quitamos el border y el outline por defecto de button*/
 	border: none;
 	outline: none;
+	/*Agregamos la transicion de color al botón ya que si este estilo lo ponemos en hover solo funciona cuando pones el raton encima y al quitarlo no hace el transition*/
 	transition: .4s ease-in-out;
+	/*Establecemos el color de fondo y el color del texto*/
 	background-color: #252525;
 	color: white;
+	/*Establecemos el ancho del botón*/
+	width: 100%;
 }
-
+/*Estilo del boton de "Sign Up" al pasar el ratón por encima*/
 .button3:hover {
 	background-color: #ae84d9;
-	color: white;
+	color: white; /*FIXME Redundante porque la fuente ya es blanca antes del hover*/
 }
 
-/*Animación*/
+
+
+
+/*Estilos para la animación de fondo*/
+
+/*Animación del fondo*/
 @keyframes move {
 	100% {
 		transform: translate3d(0, 0, 1px) rotate(360deg);
@@ -178,9 +227,9 @@ body {
 	height: 100vh;
 	top: 0;
 	left: 0;
-	background: #1f1f1f;
+	background: #1f1f1f; /*Color de fondo cogido de la paleta de colores*/
 	overflow: hidden;
-	z-index: -1;
+	z-index: -1; /*Necesario para que este por debajo de todo*/
 }
 
 .background span {
