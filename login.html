@@ -6,7 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CodeWave Login</title>
 	<link rel="stylesheet" href="resources/styles/login_styles.css">
-<script src="resources/scripts/login_script.js"></script>
+	<link
+	href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Noto+Sans:wght@300;400;600;700&display=swap"
+	rel="stylesheet"
+	/>
+	<script src="resources/scripts/login_script.js"></script>
 </head>
 
 <body>
@@ -33,7 +37,7 @@
 				</svg>
 
 				<!--Input del usuario-->
-				<input autocomplete="off" placeholder="Username" class="input-field" type="text" required>
+				<input autocomplete="off" placeholder="Username" class="input-field" type="text" id="username">
 
 			</div>
 
@@ -51,7 +55,13 @@
 				</svg>
 
 				<!--Input de la contraseña-->
-				<input placeholder="Password" class="input-field" type="password" required>
+				<input placeholder="Password" class="input-field" type="password" id="password">
+				<button type="button" class="eye" onclick="if (password.type == 'text') password.type = 'password'; else password.type = 'text';">
+					
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+						<path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zm-8 3a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+					</svg>
+				</button>
 
 			</div>
 
