@@ -1,7 +1,7 @@
 /*Estilos para el formulario del login*/
 @font-face {
 	font-family: 'Inter';
-	src: url(resources/styles/Inter-VariableFont_slnt,wght.ttf);
+	src: url(../fonts/Inter-VariableFont_opsz,wght.ttf);
 }
 
 body {
@@ -84,6 +84,13 @@ body {
 	fill: white;
 }
 
+.eye{
+	border: 0;
+	background-color: #171717;
+	color: white;
+	cursor: pointer;
+}
+
 /*Que no salga borde al escribir encima de UserName y Password*/
 .input-field {
 	background: none;
@@ -92,6 +99,7 @@ body {
 	width: 100%;
 	color: #d3d3d3;
 }
+
 
 .form .btn {
 	display: flex;
