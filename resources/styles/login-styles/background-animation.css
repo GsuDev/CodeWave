@@ -1,0 +1,258 @@
+/* Estilos para la animación de fondo */
+
+/* Definición de la animación de movimiento */
+@keyframes move {
+	100% {
+		transform: translate3d(0, 0, 1px) rotate(360deg);
+		/* Movimiento en el eje Z y rotación */
+	}
+}
+
+/* Estilo para el contenedor del fondo */
+.background {
+	position: fixed;
+	/* Fijar el fondo a la pantalla */
+	width: 100vw;
+	/* Ancho completo de la ventana */
+	height: 100vh;
+	/* Alto completo de la ventana */
+	top: 0;
+	/* Coloca el fondo en la parte superior */
+	left: 0;
+	/* Coloca el fondo en la parte izquierda */
+	background: #1f1f1f;
+	/* Color de fondo elegido */
+	overflow: hidden;
+	/* Evita el desbordamiento de los elementos */
+	z-index: -1;
+	/* Coloca el fondo detrás de todo el contenido */
+}
+
+/* Estilo para cada elemento de fondo (los círculos animados) */
+.background span {
+	width: 14vmin;
+	/* Ancho de los círculos */
+	height: 14vmin;
+	/* Alto de los círculos */
+	border-radius: 14vmin;
+	/* Bordes redondeados para hacer los círculos */
+	backface-visibility: hidden;
+	/* Evita el parpadeo en las animaciones */
+	position: absolute;
+	/* Posicionamiento absoluto respecto al contenedor */
+	animation: move;
+	/* Asocia la animación definida */
+	animation-duration: 43s;
+	/* Duración de la animación (en segundos) */
+	animation-timing-function: linear;
+	/* Función de temporización de la animación */
+	animation-iteration-count: infinite;
+	/* Hace que la animación se repita indefinidamente */
+}
+
+/* Estilos específicos para cada círculo usando nth-child */
+.background span:nth-child(1) {
+	color: #ae84d9;
+	/* Color del círculo */
+	top: 59%;
+	/* Posición vertical */
+	left: 16%;
+	/* Posición horizontal */
+	animation-duration: 18s;
+	/* Duración personalizada */
+	animation-delay: -54s;
+	/* Retraso antes de iniciar la animación */
+	transform-origin: -3vw 10vh;
+	/* Punto de origen de la animación */
+	box-shadow: -28vmin 0 3.68vmin currentColor;
+	/* Sombra del círculo */
+}
+
+.background span:nth-child(2) {
+	color: #569cd6;
+	top: 82%;
+	left: 36%;
+	animation-duration: 18s;
+	animation-delay: -33s;
+	transform-origin: -10vw 17vh;
+	box-shadow: -28vmin 0 4.12vmin currentColor;
+}
+
+.background span:nth-child(3) {
+	color: #ae84d9;
+	top: 30%;
+	left: 56%;
+	animation-duration: 42s;
+	animation-delay: -27s;
+	transform-origin: 2vw 18vh;
+	box-shadow: -28vmin 0 3.94vmin currentColor;
+}
+
+.background span:nth-child(4) {
+	color: #569cd6;
+	top: 17%;
+	left: 44%;
+	animation-duration: 41s;
+	animation-delay: -16s;
+	transform-origin: -11vw -7vh;
+	box-shadow: 28vmin 0 4.44vmin currentColor;
+}
+
+.background span:nth-child(5) {
+	color: #569cd6;
+	top: 41%;
+	left: 25%;
+	animation-duration: 68s;
+	animation-delay: -59s;
+	transform-origin: 20vw -3vh;
+	box-shadow: 28vmin 0 4.48vmin currentColor;
+}
+
+/* El resto de los elementos siguen un patrón similar con posiciones, colores y tiempos de animación */
+.background span:nth-child(6) {
+	color: #569cd6;
+	top: 97%;
+	left: 73%;
+	animation-duration: 9s;
+	animation-delay: -12s;
+	transform-origin: 5vw 7vh;
+	box-shadow: 28vmin 0 3.92vmin currentColor;
+}
+
+.background span:nth-child(7) {
+	color: #569cd6;
+	top: 15%;
+	left: 85%;
+	animation-duration: 41s;
+	animation-delay: -33s;
+	transform-origin: 12vw -17vh;
+	box-shadow: 28vmin 0 3.87vmin currentColor;
+}
+
+.background span:nth-child(8) {
+	color: #ae84d9;
+	top: 46%;
+	left: 33%;
+	animation-duration: 32s;
+	animation-delay: -41s;
+	transform-origin: 22vw 4vh;
+	box-shadow: -28vmin 0 4.43vmin currentColor;
+}
+
+.background span:nth-child(9) {
+	color: #f29f05;
+	top: 73%;
+	left: 14%;
+	animation-duration: 28s;
+	animation-delay: -68s;
+	transform-origin: -2vw 23vh;
+	box-shadow: -28vmin 0 3.66vmin currentColor;
+}
+
+.background span:nth-child(10) {
+	color: #f29f05;
+	top: 17%;
+	left: 53%;
+	animation-duration: 59s;
+	animation-delay: -49s;
+	transform-origin: -23vw -9vh;
+	box-shadow: 28vmin 0 4.33vmin currentColor;
+}
+
+.background span:nth-child(11) {
+	color: #ae84d9;
+	top: 9%;
+	left: 97%;
+	animation-duration: 45s;
+	animation-delay: -21s;
+	transform-origin: 13vw -11vh;
+	box-shadow: 28vmin 0 4.41vmin currentColor;
+}
+
+/* Y así sucesivamente para todos los elementos... */
+
+
+
+.background span:nth-child(11) {
+	color: #ae84d9;
+	top: 9%;
+	left: 97%;
+	animation-duration: 45s;
+	animation-delay: -21s;
+	transform-origin: 13vw -11vh;
+	box-shadow: 28vmin 0 4.410335828358947vmin currentColor;
+}
+
+.background span:nth-child(12) {
+	color: #569cd6;
+	top: 61%;
+	left: 56%;
+	animation-duration: 36s;
+	animation-delay: -25s;
+	transform-origin: 3vw -8vh;
+	box-shadow: 28vmin 0 3.8869098123944865vmin currentColor;
+}
+
+.background span:nth-child(13) {
+	color: #f29f05;
+	top: 24%;
+	left: 35%;
+	animation-duration: 57s;
+	animation-delay: -63s;
+	transform-origin: -18vw 9vh;
+	box-shadow: 28vmin 0 4.433622169785215vmin currentColor;
+}
+
+.background span:nth-child(14) {
+	color: #ae84d9;
+	top: 29%;
+	left: 98%;
+	animation-duration: 71s;
+	animation-delay: -9s;
+	transform-origin: 16vw 24vh;
+	box-shadow: 28vmin 0 3.9638851000926727vmin currentColor;
+}
+
+.background span:nth-child(15) {
+	color: #569cd6;
+	top: 81%;
+	left: 99%;
+	animation-duration: 30s;
+	animation-delay: -33s;
+	transform-origin: 10vw 1vh;
+	box-shadow: -28vmin 0 4.024986232698927vmin currentColor;
+}
+
+.background span:nth-child(16) {
+	color: #569cd6;
+	top: 33%;
+	left: 47%;
+	animation-duration: 67s;
+	animation-delay: -69s;
+	transform-origin: -18vw -14vh;
+	box-shadow: -28vmin 0 3.583933646207292vmin currentColor;
+}
+
+.background span:nth-child(17) {
+	color: #569cd6;
+	top: 46%;
+	left: 51%;
+	animation-duration: 71s;
+	animation-delay: -46s;
+	transform-origin: 4vw 18vh;
+	box-shadow: 28vmin 0 3.9611171709610113vmin currentColor;
+}
+
+.background span:nth-child(18) {
+	color: #569cd6;
+	top: 10%;
+	left: 80%;
+	animation-duration: 54s;
+	animation-delay: -64s;
+	transform-origin: -7vw -20vh;
+	box-shadow: -28vmin 0 4.100343922199473vmin currentColor;
+}
+
+.background span:nth-child(19) {
+	color: #569cd6;
+}
