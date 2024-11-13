@@ -7,3 +7,225 @@
 	font-family: 'Urbanist';
 	src: url(../fonts/Urbanist-VariableFont_wght.ttf);
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Inter' ;
+    background-color: #1f1f1f;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+.logo-container{
+    position: absolute;
+    left: 5vw;
+    margin-top: 3vh;
+}
+.logo-img{
+    height: 5vh;
+}
+
+.menu-container{
+    margin-top: 3vh;
+}
+.menu-options-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    list-style: none;
+}
+.menu-options-list li a{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+.menu-options-list li a:hover{
+    color: #5696D6;
+}
+.login-options-container{
+    margin-top: 3vh;
+    position: absolute;
+    right: 5vw;
+}
+.login-options-list{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    list-style: none;
+}
+.login-options-list li a{
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+.login-options-list li a:hover{
+    color: #5696D6;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    gap: 5vh;
+    color: #fff;
+}
+.description-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    margin-top: 10vh;
+
+}
+
+/* From Uiverse.io by Randdose */ 
+.start-button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.6em 2em;
+    border: mediumspringgreen solid 0.15em;
+    border-radius: 0.25em;
+    color: mediumspringgreen;
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+}
+  
+.start-button p {
+    z-index: 1;
+    font-family: 'Urbanist';
+    font-weight: 800;
+}
+  
+.start-button:hover {
+    color: #212121;
+}
+  
+.start-button:active {
+    border-color: teal;
+}
+  
+.start-button::after, .start-button::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: mediumspringgreen;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+}
+  
+.start-button::before {
+    left: 0;
+    transform: translateX(-8em);
+}
+  
+.start-button::after {
+    right: 0;
+    transform: translateX(8em);
+}
+  
+.start-button:hover:before {
+    transform: translateX(-1em);
+}
+  
+.start-button:hover:after {
+    transform: translateX(1em);
+}
+  
+.start-button:active:before,
+  .start-button:active:after {
+    background: teal;
+}
+
+
+
+
+
+
+
+
+  /*Fondo animado*/
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* Add your background pattern here */
+    background-color: lightblue;
+    background-image: radial-gradient(black 55%, #0000),
+      /* radial-gradient(black 55%, #0000), */
+        linear-gradient(
+          135deg,
+          red,
+          orange,
+          yellow,
+          lime,
+          cyan,
+          blue,
+          indigo,
+          deeppink
+        );
+    background-size: 100% 0.5%, contain;
+    /* background-blend-mode: hard-light; */
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+}
+.anim-1{
+    animation: move1 15s linear infinite;
+}
+.anim-2{
+    animation: move2 15s linear infinite;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+
+}
+@keyframes move2 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+
+}
