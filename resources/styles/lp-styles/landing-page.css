@@ -15,9 +15,13 @@
 }
 body{
     font-family: 'Inter' ;
-    background-color: #1f1f1f;
-    width: 100vw;
-    height: 100vh;
+    color: white;
+    min-block-size: 60vh;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: Inter;
+    font-size: min(100%, 4vmin);
     
 }
 
@@ -25,8 +29,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: static;
     top: 0;
+    margin-top: 3vh;
     width: 100%;
 
 }
@@ -91,7 +96,6 @@ main{
     align-items: center;
     margin-top: 10vh;
     gap: 5vh;
-    color: #fff;
 }
 .description-section{
     display: flex;
@@ -102,4 +106,56 @@ main{
     margin-top: 10vh;
 
 }
+.main-subtitle{
+    font-size: 3vmin;
+    line-height: 1.1;
+    max-inline-size: 50ch;
+    margin: auto;
+}
+.features-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    margin-top: 10vh;
+    height: 100vh;
+}
+
+section {
+    /*  leverage cascade for cross-browser gradients  */
+    background: 
+    linear-gradient(20deg, hsl(270, 100%, 50%) 20%, hsl(39, 100%, 50%) 90%) fixed;
+
+    ;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  } 
+ 
+  h1, p, body {
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 7vmin;
+    line-height: 1.1;
+    max-inline-size: 15ch;
+    margin: auto;
+  }
+  
+  p {
+    font-family: "Inter", ui-monospace, monospace;
+    margin-top: 1ch;
+    line-height: 1.35;
+    max-inline-size: 40ch;
+    margin: auto;
+  }
+  
+  html {
+    block-size: 100%;
+    inline-size: 100%;
+    text-align: center;
+  }
 
