@@ -2,6 +2,7 @@ window.addEventListener('resize', function() {
     const logo = document.querySelector('.logo-container');
     const header = document.querySelector('header');
     const menu = document.querySelector('.menu-container');
+    const background = document.querySelector('.background-position');
     const width = window.innerWidth;
     const height = window.innerHeight;
     if (width < 900) { // Change 600 to your desired breakpoint
@@ -11,6 +12,12 @@ window.addEventListener('resize', function() {
         // Reset styles for larger screens
         menu.style.display = 'block';
         header.style.margin = '2vh 0 0 0';
+    }
+    if (width > 1920) { // Change 600 to your desired breakpoint
+        background.style.inset = '0 50% 0 0';
+
+    }else {
+        background.style.inset = '0%';
     }
 
 });

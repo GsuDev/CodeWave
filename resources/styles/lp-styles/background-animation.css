@@ -1,14 +1,22 @@
-body {
+body{
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
-  #stars, #stars2, #stars3, #stars::after, #stars2::after, #stars3::after {
+  #stars, #stars2, #stars3, #stars::after, #stars2::after, #stars3::after, #stars4, #stars4::after, #stars5, #stars5::after, #stars6, #stars6::after {
     overflow: hidden;
-  }
-#stars {
     position: absolute;
+}
+.background-position{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#stars {
+    
+
     width: 1px;
     height: 1px;
     background: transparent;
@@ -18,7 +26,7 @@ body {
   }
   #stars:after {
     content: " ";
-    position: absolute;
+    
     top: 2000px;
     width: 1px;
     height: 1px;
@@ -27,7 +35,7 @@ body {
   }
   
   #stars2 {
-    position: absolute;
+    
     width: 2px;
     height: 2px;
     background: transparent;
@@ -40,7 +48,7 @@ body {
   }
   #stars2:after {
     content: " ";
-    position: absolute;
+    
     top: 2000px;
     width: 2px;
     height: 2px;
@@ -49,7 +57,7 @@ body {
   }
   
   #stars3 {
-    position: absolute;
+    
     width: 3px;
     height: 3px;
     background: transparent;
@@ -63,7 +71,7 @@ body {
   }
   #stars3:after {
     content: " ";
-    position: absolute;
+    
     top: 2000px;
     width: 3px;
     height: 3px;
@@ -72,7 +80,7 @@ body {
   }
 
   #stars4 {
-    position: absolute;
+    
     width: 1px;
     height: 1px;
     background: transparent;
@@ -83,7 +91,7 @@ body {
   }
   #stars4:after {
     content: " ";
-    position: absolute;
+    
     top: 2000px;
     width: 1px;
     height: 1px;
@@ -92,7 +100,7 @@ body {
   }
   
   #stars5 {
-    position: absolute;
+    
     width: 2px;
     height: 2px;
     background: transparent;
@@ -102,7 +110,7 @@ body {
   }
   #stars5:after {
     content: " ";
-    position: absolute;
+    
     top: 2000px;
     width: 2px;
     height: 2px;
@@ -111,7 +119,7 @@ body {
   }
   
   #stars6 {
-    position: absolute;
+    
     width: 3px;
     height: 3px;
     background: transparent;
@@ -122,7 +130,7 @@ body {
   }
   #stars6:after {
     content: " ";
-    position: absolute;
+    
     top: 2000px;
     width: 3px;
     height: 3px;
