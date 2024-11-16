@@ -11,13 +11,8 @@ window.addEventListener('resize', function() {
     } else {
         // Reset styles for larger screens
         menu.style.display = 'block';
-        header.style.margin = '2vh 0 0 0';
+        header.style.margin = '3vh 0 0 0';
     }
-    if (width > 1920) { // Change 600 to your desired breakpoint
-        background.style.inset = '0 50% 0 0';
 
-    }else {
-        background.style.inset = '0%';
-    }
 
 });
