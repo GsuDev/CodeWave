@@ -1,5 +1,5 @@
 /* From Uiverse.io by Randdose */ 
-.start-button {
+.start-button{
     all: unset;
     display: flex;
     align-items: center;
@@ -15,19 +15,18 @@
     transition: border 300ms, color 300ms;
     user-select: none;
 }
-  
 .start-button p {
     z-index: 1;
     font-weight: 800;
     font-size: 1.6em;
 }
   
-.start-button:hover {
+.start-button:hover{
     color: #1f1f1f;
     border-color: #f29f05;
 }
   
-.start-button:active {
+.start-button:active{
     border-color: #569cd6;
 }
   
