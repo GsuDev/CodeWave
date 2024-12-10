@@ -1,93 +1,106 @@
 @font-face {
-    font-family: 'Inter';
-    src: url();
+  font-family: 'Inter';
+  src: url();
 }
+
 /*Fuente del logo*/
 @font-face {
-	font-family: 'Urbanist';
-	src: url(../fonts/Urbanist-VariableFont_wght.ttf);
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-body{
-    font-family: 'Inter' ;
-    color: white;
-    min-block-size: 60vh;
-    box-sizing: border-box;
-    display: grid;
-    place-content: center;
-    font-family: Inter;
-    font-size: min(100%, 4vmin);
-    
+  font-family: 'Urbanist';
+  src: url(../fonts/Urbanist-VariableFont_wght.ttf);
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: static;
-    top: 0;
-    margin-top: 3vh;
-    width: 100%;
-    z-index: 3;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 }
-.logo-container{
-    position: absolute;
-    left: 5vw;
-    margin-top: 3vh;
-}
-.logo-img{
-    height: 3em;
+
+body {
+  font-family: 'Inter';
+  color: white;
+  min-block-size: 60vh;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  font-family: Inter;
+  font-size: min(100%, 4vmin);
+
 }
 
-.menu-container{
-    margin-top: 3vh;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  top: 0;
+  margin-top: 3vh;
+  width: 100%;
+  z-index: 3;
+
 }
-.menu-options-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
-    list-style: none;
+
+.logo-container {
+  position: absolute;
+  left: 5vw;
+  margin-top: 3vh;
 }
-.menu-options-list li a{
-    color: #fff;
-    font-size: 1.2em;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
+
+.logo-img {
+  height: 3em;
 }
-.menu-options-list li a:hover{
-    color: #5696D6;
+
+.menu-container {
+  margin-top: 3vh;
 }
-.login-options-container{
-    margin-top: 3vh;
-    position: absolute;
-    right: 5vw;
+
+.menu-options-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  list-style: none;
 }
-.login-options-list{
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-    gap: 5vw;
-    list-style: none;
+
+.menu-options-list li a {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
 }
-.login-options-list li a{
-    color: #fff;
-    font-size: 1.2em;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
+
+.menu-options-list li a:hover {
+  color: #5696D6;
 }
-.login-options-list li a:hover{
-    color: #5696D6;
+
+.login-options-container {
+  margin-top: 3vh;
+  position: absolute;
+  right: 5vw;
 }
+
+.login-options-list {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  list-style: none;
+}
+
+.login-options-list li a {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-options-list li a:hover {
+  color: #5696D6;
+}
+
 /* General Reset */
 * {
   margin: 0;
@@ -104,48 +117,79 @@ body {
 
 /* About Section */
 #about {
-    padding: 60px 20px;
-    background-color: #121212;
-  }
-  
+  padding: 60px 20px;
+  background-color: #121212;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Three equal columns */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* About Box Styling */
+.about-box {
+  background-color: #171717;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.about-box h1,
+.about-box h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about-box p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Hover Effect for About Box */
+.about-box:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.cta {
+  display: flex;
+  /* Cambia a Flexbox para centrar */
+  justify-content: center;
+  /* Centra horizontalmente */
+  margin-top: 5%;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #1db954;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  /*Agregamos la transicion de color al botón ya que si este estilo lo ponemos en hover solo funciona cuando pones el raton encima y al quitarlo no hace el transition*/
+  transition: .4s ease-in-out;
+  /*Establecemos el color de fondo y el color del texto*/
+  background-color: #252525;
+}
+
+.cta-button:hover {
+  background-color: #569cd6;
+	color: white; /*FIXME Redundante porque la fuente ya es blanca antes del hover*/
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
   .about-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: 1fr;
+    /* Stacked layout on small screens */
   }
-  
-  /* About Box Styling */
-  .about-box {
-    background-color: #171717;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-  }
-  
-  .about-box h1, .about-box h2 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  .about-box p {
-    font-size: 1rem;
-    color: #ddd;
-    line-height: 1.6;
-  }
-  
-  /* Hover Effect for About Box */
-  .about-box:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transform: translateY(-5px);
-  }
-  
-  /* Make the layout responsive */
-  @media (max-width: 768px) {
-    .about-content {
-      grid-template-columns: 1fr; /* Stacked layout on small screens */
-    }
-  }
+}
