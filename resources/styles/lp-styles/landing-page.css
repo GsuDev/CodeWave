@@ -119,6 +119,7 @@ main{
     width: 80vw; /* Ajusta el tamaño del contenedor */
     height: 80vh;
     margin: 100px auto; /* Centrado en la página */
+    z-index: -1;
 }
 /* Estilo de cada imagen */
 .floating-logo1, .floating-logo2, .floating-logo3, .floating-logo4, .floating-logo5 {
@@ -127,7 +128,7 @@ main{
     height: 50px;
     top: 50%;
     left: 50%;
-    transform-origin: center; /* El origen del giro está en el centro de la imagen */
+    transform: translate(-50%, -50%);/* El origen del giro está en el centro de la imagen */
     animation-iteration-count: infinite; /* La animación se repite infinitamente */
 }
 
@@ -138,7 +139,7 @@ main{
 }
 
 .floating-logo2 {
-    animation: orbitar2 40s infinite;
+    animation: orbitar2 30s infinite;
     animation-timing-function: linear;
 }
 
@@ -148,40 +149,40 @@ main{
 }
 
 .floating-logo4 {
-    animation: orbitar4 35s infinite;
+    animation: orbitar4 30s infinite;
     animation-timing-function: linear;
 }
 
 .floating-logo5 {
-    animation: orbitar5 50s infinite;
+    animation: orbitar5 30s infinite;
     animation-timing-function: linear;
 }
 
 /* Definir las animaciones de órbita con diferentes radios */
 @keyframes orbitar1 {
     0% {
-        transform: rotate(0deg) translateX(25vmin) rotate(0deg); /* Radio de 100px */
+        transform: rotate(0deg) translateX(33vmin) rotate(0deg); /* Radio de 100px */
     }
     100% {
-        transform: rotate(360deg) translateX(25vmin) rotate(-360deg);
+        transform: rotate(360deg) translateX(33vmin) rotate(-360deg);
     }
 }
 
 @keyframes orbitar2 {
     0% {
-        transform: rotate(72deg) translateX(30vmin) rotate(-72deg); /* Radio de 120px */
+        transform: rotate(72deg) translateX(33vmin) rotate(-72deg); /* Radio de 120px */
     }
     100% {
-        transform: rotate(432deg) translateX(30vmin) rotate(-432deg);
+        transform: rotate(432deg) translateX(33vmin) rotate(-432deg);
     }
 }
 
 @keyframes orbitar3 {
     0% {
-        transform: rotate(144deg) translateX(45vmin) rotate(-144deg); /* Radio de 150px */
+        transform: rotate(144deg) translateX(33vmin) rotate(-144deg); /* Radio de 150px */
     }
     100% {
-        transform: rotate(504deg) translateX(45vmin) rotate(-504deg);
+        transform: rotate(504deg) translateX(33vmin) rotate(-504deg);
     }
 }
 
@@ -196,10 +197,10 @@ main{
 
 @keyframes orbitar5 {
     0% {
-        transform: rotate(288deg) translateX(45vmin) rotate(-288deg); /* Radio de 200px */
+        transform: rotate(288deg) translateX(33vmin) rotate(-288deg); /* Radio de 200px */
     }
     100% {
-        transform: rotate(648deg) translateX(45vmin) rotate(-648deg);
+        transform: rotate(648deg) translateX(33vmin) rotate(-648deg);
     }
 }
 

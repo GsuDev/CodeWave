@@ -1,0 +1,17 @@
+{
+  "name": "codewave",
+  "version": "1.0.0",
+  "description": "**CodeWave** is a cutting-edge snippet management tool 🛠️ designed to empower developers working across multiple programming languages. It simplifies workflows by enabling real-time translation, commenting, and organization of code snippets, boosting productivity 🚀 and enhancing efficiency.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeWave</title>
-    <link rel="stylesheet" href="resources/styles/app-styles/styles.css">
-    <script src="resources/script/script.js"></script>
+    <link rel="stylesheet" href="resources/styles/app-styles/app.css">
 </head>
+
 <body>
     <header>
-        <div></div>
+        <h1><a class="titulo" href="index.html">CodeWave</a></h1>
         <nav>
-            <a href="index.html"><img src="resources/media/logos/logo.png" class="logo"></a>
             <ul>
-                <li><a href="https://github.com/CodeWaveDev/CodeWave">Github</a></li>
-                <li><a href="https://github.com/CodeWaveDev/CodeWave/issues/new">Reportar error</a></li>
+                <li><a href="app.html">Editor</a></li>
+                <li><a href="snippets.html">Snippets</a></li>
+                <li><a href="#settings">Settings</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <aside>
-            <ul>
-                <li><img src="resources/media/img/c.png" alt="C" class="language-icon">C</li>
-                <li><img src="resources/media/img/cpp.png" alt="C++" class="language-icon">C++</li>
-                <li><img src="resources/media/img/java.png" alt="Java" class="language-icon">Java</li>
-                <li><img src="resources/media/img/javascript.png" alt="JavaScript" class="language-icon">JavaScript</li>
-                <li><img src="resources/media/img/python.png" alt="Python" class="language-icon">Python</li>
-                <li><img src="resources/media/img/php.png" alt="PHP" class="language-icon">PHP</li>
-            </ul>
-        </aside>
-        <section>
-            
+        <section id="editor">
+            <h2>Snippet Editor</h2>
+            <input id="snippet-title" type="text" placeholder="Snippet Title">
+            <textarea id="snippet-code" placeholder="Write your code here..."></textarea>
+            <label for="language">Language:</label>
+            <select id="language">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="kotlin">Kotlin</option>
+            </select>
+            <button id="save-snippet">Save Snippet</button>
+        </section>
+        <section id="snippet-list">
+            <h2>Saved Snippets</h2>
+        </section>
+        <section id="settings">
+            <h2>Settings</h2>
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="kotlin">Kotlin</option>
+            </select>
         </section>
     </main>
-    
+
+    <footer>
+        <p>&copy; 2024 CodeWave. All rights reserved.</p>
+    </footer>
+
+    <script src="resources/scripts/app.js"></script>
 </body>
-    <script src="resources/script.js"></script>
+
 </html>
