@@ -1,20 +1,16 @@
 import express from 'express'
-import fs from 'fs'
+import path from 'path'
 
 const app = express()
+const __dirname = path.resolve() // Obtiene la ruta absoluta del directorio actual
 
-let indexHTML = fs.readFileSync('./static/index.html', 'utf-8')
+// Sirve archivos estáticos desde la carpeta "static"
+app.use(express.static(path.join(__dirname, 'static')))
 
 app.get('/', (req, res) => {
-    res.send(indexHTML)
-})
-
-app.get('/resources/:name', (req, res) => {
-    let name = req.params.name
-    let resource = fs.readFileSync(`./static/${name}`,'utf-8')
-    res.send(resource)
+  res.sendFile(path.join(__dirname, 'static', 'index.html'))
 })
 
 app.listen(3000, () => {
-    console.log('Server is runing on http://localhost:3000')
+  console.log('Server is running on http://localhost:3000')
 })

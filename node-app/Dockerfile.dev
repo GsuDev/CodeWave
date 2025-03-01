@@ -1,6 +1,7 @@
 FROM node:22
 
-RUN echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf
+RUN npm install standard -g
+RUN npm install express -g
 RUN npm install nodemon -g
 RUN mkdir -p /home/node-app
 
