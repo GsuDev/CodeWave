@@ -1,19 +1,19 @@
-version: "3.9"
 services:
-  node-app:
+  codewave-node-app:
     build:
       context: ./node-app
       dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     links:
-      - mysql-db
+      - codewave-db
     volumes:
       - ./node-app:/home/node-app
       - /home/app/node_modules  # Excluye node_modules del volumen
     command: sh -c "npm install && npm run devmon"  # Instala dependencias y ejecuta la app
-  mysql-db:
-    image: mysql:5.7
+
+  codewave-db:
+    image: mariadb:latest  # Cambiado de MySQL a MariaDB
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: codewave
@@ -23,6 +23,6 @@ services:
       - "3306:3306"
     volumes:
       - mysql-db-data:/var/lib/mysql
+
 volumes:
   mysql-db-data:
-  

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "0297f8cb-f166-4494-9a26-0379ae046dfa",
+    "title": "Hello World in Python",
+    "code": "print('Hello, World!')",
+    "language": "Python",
+    "description": "A simple script to print 'Hello, World!'"
+  },
+  {
+    "id": "cbd7d6d6-a73c-4d51-a2fa-b703f8f33a3e",
+    "title": "FizzBuzz in JavaScript",
+    "code": "for (let i = 1; i <= 100; i++) {\n    if (i % 3 === 0 && i % 5 === 0) {\n        console.log('FizzBuzz');\n    } else if (i % 3 === 0) {\n        console.log('Fizz');\n    } else if (i % 5 === 0) {\n        console.log('Buzz');\n    } else {\n        console.log(i);\n    }\n}",
+    "language": "JavaScript",
+    "description": "A classic programming challenge."
+  },
+  {
+    "id": "e6fbe896-67d5-4b96-9809-3628cc5624db",
+    "title": "Factorial in C++",
+    "code": "#include <iostream>\nusing namespace std;\n\nint factorial(int n) {\n    if (n == 0 || n == 1) return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n    int num = 5;\n    cout << \"Factorial of \" << num << \" is \" << factorial(num) << endl;\n    return 0;\n}",
+    "language": "C++",
+    "description": "Calculates the factorial of a number using recursion."
+  }
+]
