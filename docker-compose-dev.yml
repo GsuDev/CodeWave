@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  node-app:
+    build:
+      context: ./node-app
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    links:
+      - mysql-db
+    volumes:
+      - ./node-app:/home/node-app
+  mysql-db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: codewave
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-db-data:/var/lib/mysql
+volumes:
+  mysql-db-data:
+  

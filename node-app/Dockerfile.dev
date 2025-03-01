@@ -1,0 +1,11 @@
+FROM node:22
+
+RUN echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf
+RUN npm install nodemon -g
+RUN mkdir -p /home/node-app
+
+WORKDIR /home/node-app
+
+EXPOSE 3000
+
+CMD [ "nodemon", "--legacy-watch", "app.js" ]
