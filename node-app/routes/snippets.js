@@ -9,10 +9,7 @@ export const snippetsRouter = Router()
 snippetsRouter.get('/', SnippetController.getAll)
 
 // Devuelve un snippet con una id concreta
-snippetsRouter.get('/:id', (req, res) => {
-  const { id } = req.params
-  SnippetController.getById({ id })
-})
+snippetsRouter.get('/:id', SnippetController.getById)
 
 // Recive un nuevo snippet y lo guarda en el json
 snippetsRouter.post('/', (req, res) => {
