@@ -1,12 +1,17 @@
 import { Router } from 'express'
 import { readJson } from '../utils/json.js'
+import { SnippetController } from '../controllers/snippets.js'
 
 // Creo un router para los snippets
 export const snippetsRouter = Router()
 
 // Devuelve todos los snippets
-snippetsRouter.get('/', (req, res) => {
-  res.json(readJson('../snippets.json'))
+snippetsRouter.get('/', SnippetController.getAll)
+
+// Devuelve un snippet con una id concreta
+snippetsRouter.get('/:id', (req, res) => {
+  const { id } = req.params
+  SnippetController.getById({ id })
 })
 
 // Recive un nuevo snippet y lo guarda en el json
@@ -18,17 +23,6 @@ snippetsRouter.post('/', (req, res) => {
   }
   snippets.push(newSnippet)
   res.status(201).json(newSnippet)
-})
-
-// Devuelve un snippet con una id concreta
-snippetsRouter.get('/:id', (req, res) => {
-  const { id } = req.params
-  const snippets = readJson('../snippets.json')
-  const snippet = snippets.find(snippet => snippet.id === id)
-  if (snippet) {
-    res.json(snippet)
-  }
-  res.status(404).json({ message: 'Snippet not found' })
 })
 
 // Reemplaza un snippet por id
