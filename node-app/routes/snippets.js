@@ -11,6 +11,8 @@ snippetsRouter.get('/', SnippetController.getAll)
 // Devuelve un snippet con una id concreta
 snippetsRouter.get('/:id', SnippetController.getById)
 
+// Devuelve un snippet con un titulo concreto
+snippetsRouter.get('/title/:title', SnippetController.getByTitle)
 // Recive un nuevo snippet y lo guarda en el json
 snippetsRouter.post('/', SnippetController.create)
 

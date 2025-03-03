@@ -2,15 +2,18 @@
 GET http://localhost:3000/snippets
 
 ### Get a single snippet by id
-GET http://localhost:3000/snippets/7e2c0d9b-f826-11ef-98df-0242ac120002
+GET http://localhost:3000/snippets/9ffaf10f-f850-11ef-b734-0242ac130002
+
+### Get a single snippet by title
+GET http://localhost:3000/snippets/title/teco
 
 ### Create a new snippet
 POST http://localhost:3000/snippets
 Content-Type: application/json
 
 {
-  "user_id": "7e1c680d-f826-11ef-98df-0242ac120002",
-  "title": "Suma en astralopiteco3",
+  "user_id": "93da3a05-f850-11ef-b734-0242ac130002",
+  "title": "Suma en astralopiteco5",
   "description": "Función para sumar dos números en astralopiteco",
   "lang": "astralopiteco",
   "code": "abracasumabra"
