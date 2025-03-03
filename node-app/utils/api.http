@@ -2,17 +2,18 @@
 GET http://localhost:3000/snippets
 
 ### Get a single snippet by id
-GET http://localhost:3000/snippets/0297f8cb-f166-4494-9a26-0379ae046dfa
+GET http://localhost:3000/snippets/7e2c0d9b-f826-11ef-98df-0242ac120002
 
 ### Create a new snippet
 POST http://localhost:3000/snippets
 Content-Type: application/json
 
 {
-  "title": "Hello World in Python",
-  "code": "print('Hello, World!')",
-  "language": "Python",
-  "description": "A simple script to print 'Hello, World!'"
+  "user_id": "7e1c680d-f826-11ef-98df-0242ac120002",
+  "title": "Suma en astralopiteco3",
+  "description": "Función para sumar dos números en astralopiteco",
+  "lang": "astralopiteco",
+  "code": "abracasumabra"
 }
 
 ### Put a snippet

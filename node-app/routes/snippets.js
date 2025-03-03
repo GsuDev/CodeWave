@@ -12,15 +12,7 @@ snippetsRouter.get('/', SnippetController.getAll)
 snippetsRouter.get('/:id', SnippetController.getById)
 
 // Recive un nuevo snippet y lo guarda en el json
-snippetsRouter.post('/', (req, res) => {
-  const snippets = readJson('../snippets.json')
-  const newSnippet = {
-    id: crypto.randomUUID(),
-    ...req.body
-  }
-  snippets.push(newSnippet)
-  res.status(201).json(newSnippet)
-})
+snippetsRouter.post('/', SnippetController.create)
 
 // Reemplaza un snippet por id
 snippetsRouter.put('/:id', (req, res) => {
