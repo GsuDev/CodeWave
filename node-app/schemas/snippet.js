@@ -20,9 +20,11 @@ const snippetSchema = z.object({
   ).max(30,
     { message: 'Exceeded lang max length of 30 chars' }
   ),
-  code: z.string()
+  code: z.string().nonempty(
+    { message: 'Code is required' }
+  )
 })
 
-export const validateSchema = (object) => {
+export const validateSnippet = (object) => {
   return snippetSchema.safeParse(object)
 }

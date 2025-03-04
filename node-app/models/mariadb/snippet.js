@@ -1,5 +1,5 @@
 import mysql from 'mysql2/promise'
-import { validateSchema } from '../../schemas/snippet.js'
+import { validateSnippet } from '../../schemas/snippet.js'
 
 // Conector de la base de datos
 const conn = await mysql.createConnection({
@@ -27,7 +27,8 @@ const conn = await mysql.createConnection({
 // Hay que hacer manejo de errores
 export class SnippetModel {
   // Recupera todos los snippets de la base de datos
-  static async getAll () {
+  static async getSnippets (incomingQuery) {
+    const result = validateQuery(incomingQuery)
     const [snippets] = await conn.query(
       'SELECT * FROM snippets'
     )
@@ -59,7 +60,7 @@ export class SnippetModel {
   // Crea un nuevo snippet en la base de datos
   static async create (incomingSnippet) {
     // Usamos zod para validar la request
-    const result = validateSchema(incomingSnippet)
+    const result = validateSnippet(incomingSnippet)
     if (result.error) {
       return { error: true, message: JSON.parse(result.error.message) }
     }

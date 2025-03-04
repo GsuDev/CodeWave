@@ -9,11 +9,11 @@ services:
       - codewave-db
     volumes:
       - ./node-app:/home/node-app
-      - /home/app/node_modules  # Excluye node_modules del volumen
-    command: sh -c "npm install && npm run devmon"  # Instala dependencias y ejecuta la app
+      - /home/app/node_modules # Excluye node_modules del volumen
+    command: sh -c "npm install && npm run devmon" # Instala dependencias y ejecuta la app
 
   codewave-db:
-    image: mariadb:latest  # Cambiado de MySQL a MariaDB
+    image: mariadb:latest # Cambiado de MySQL a MariaDB
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: codewave
@@ -22,7 +22,4 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql-db-data:/var/lib/mysql
-
-volumes:
-  mysql-db-data:
+      - ./codewave-db/database:/var/lib/mysql

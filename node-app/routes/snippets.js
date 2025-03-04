@@ -6,7 +6,7 @@ import { SnippetController } from '../controllers/snippets.js'
 export const snippetsRouter = Router()
 
 // Devuelve todos los snippets
-snippetsRouter.get('/', SnippetController.getAll)
+snippetsRouter.get('/', SnippetController.getSnippets)
 
 // Devuelve un snippet con una id concreta
 snippetsRouter.get('/:id', SnippetController.getById)

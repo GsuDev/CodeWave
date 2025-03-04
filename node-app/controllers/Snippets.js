@@ -3,8 +3,9 @@ import { SnippetModel } from '../models/mariadb/snippet.js'
 // Controlador de los snippets
 export class SnippetController {
   // Obtener todos los snippets
-  static async getAll (req, res) {
-    const snippets = await SnippetModel.getAll()
+  static async getSnippets (req, res) {
+    const snippets = await SnippetModel.getSnippets(req.query)
+    if (snippets.error) return res.json(snippets.message)
     return res.json(snippets)
   }
 
