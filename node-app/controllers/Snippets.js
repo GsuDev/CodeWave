@@ -24,6 +24,6 @@ export class SnippetController {
   static async create (req, res) {
     const newSnippet = await SnippetModel.create(req.body)
     if (newSnippet.error) return res.status(400).json({ message: newSnippet.message })
-    return res.status(201).json(newSnippet.snippet)
+    return res.status(201).json(newSnippet.data)
   }
 }

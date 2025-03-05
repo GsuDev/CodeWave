@@ -9,8 +9,8 @@ Content-Type: application/json
 
 {
   "user_id": "1f073959-f9be-11ef-b248-0242ac130002",
-  "title": "Suma",
-  "description": "no obli",
+  "title": "",
+  "description": "",
   "lang": "astralopiteco",
   "code": "abracasumabra"
 }
