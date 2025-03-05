@@ -1,20 +1,16 @@
-### Get all snippets
-GET http://localhost:3000/snippets
-
+### Get all snippets or quered
+GET http://localhost:3000/snippets?title=Python&&description=a
 ### Get a single snippet by id
 GET http://localhost:3000/snippets/8a41c75a-f8ac-11ef-a64c-0242ac120002
-
-### Get a single snippet by title
-GET http://localhost:3000/snippets/title/teco
 
 ### Create a new snippet
 POST http://localhost:3000/snippets
 Content-Type: application/json
 
 {
-  "user_id": "2a128f6b-f8af-11ef-a64c-0242ac120002",
-  "title": "Suma en astralopiteco5",
-  "description": "",
+  "user_id": "1f073959-f9be-11ef-b248-0242ac130002",
+  "title": "Suma",
+  "description": "no obli",
   "lang": "astralopiteco",
   "code": "abracasumabra"
 }

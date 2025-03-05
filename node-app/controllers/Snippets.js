@@ -6,7 +6,7 @@ export class SnippetController {
   static async getSnippets (req, res) {
     const snippets = await SnippetModel.getSnippets(req.query)
     if (snippets.error) return res.json(snippets.message)
-    return res.json(snippets)
+    return res.json(snippets.data)
   }
 
   // Obtener un snippet por id
@@ -17,24 +17,7 @@ export class SnippetController {
     const snippet = await SnippetModel.getById({ id })
     // Si no lo encuentra da 404
     if (!snippet) return res.status(404).json({ message: 'Snippet not found' })
-    return res.json(snippet)
-  }
-
-  // Obtener un snippet por id
-  static async getByTitle (req, res) {
-    // Recupera el parametro title de la url
-    const { title } = req.params // Obtener el título desde req.params
-
-    if (!title) {
-      return res.status(400).json({ error: 'Title is required' })
-    }
-
-    const decodedTitle = decodeURIComponent(title) // Decodifica espacios y caracteres especiales
-    // Pide a base de datos el snippet con ese title
-    const snippet = await SnippetModel.getByTitle({ title: decodedTitle })
-    // Si no lo encuentra da 404
-    if (!snippet) return res.status(404).json({ message: 'Snippet not found' })
-    return res.json(snippet)
+    return res.json(snippet.data)
   }
 
   // Crear/Guardar un snippet

@@ -1,5 +1,6 @@
 import mysql from 'mysql2/promise'
 import { validateSnippet } from '../../schemas/snippet.js'
+import { validateQuery } from '../../schemas/query.js'
 
 // Conector de la base de datos
 const conn = await mysql.createConnection({
@@ -26,13 +27,42 @@ const conn = await mysql.createConnection({
 
 // Hay que hacer manejo de errores
 export class SnippetModel {
-  // Recupera todos los snippets de la base de datos
+  // Recupera todos los snippets de la base de datos o si se pasan query
+  // params los recupera y devuelve según estos
   static async getSnippets (incomingQuery) {
+    // Hacemos la validación con su schema de zod
     const result = validateQuery(incomingQuery)
-    const [snippets] = await conn.query(
-      'SELECT * FROM snippets'
-    )
-    return snippets
+
+    // Si había query params y estos tienen un error se devuelve el error
+    if (result && result.error) return { error: true, message: JSON.parse(result.error.message) }
+    // Si en este punto hay query params estos son validos
+    if (Object.keys(result.data).length > 0) {
+      // Guardamos el objeto donde vienen los query params en dos arrays
+      // En este las claves
+      const keys = Object.keys(result.data)
+      // En este los valores
+      const values = Object.values(result.data)
+
+      // Construyo la query en una variable
+      let query = 'SELECT * FROM snippets WHERE '
+
+      // Añado las condiciones con el nombre del atributo y el valor que ha pasado el usuario con un LIKE enmedio
+      const conditions = keys.map((columna) => `${columna} LIKE ?`)
+      query += conditions.join(' AND ') // Unir todas las condiciones con "AND"
+
+      // Se asegura que los valores se pasen correctamente como parámetros
+      const formattedValues = values.map(value => `%${value}%`)
+
+      console.log('Ejecutando consulta:', query, 'con valores:', formattedValues)
+
+      // Pasamos la query y los valores separados
+      const [snippets] = await conn.query(query, formattedValues)
+
+      return { data: snippets, error: false }
+    }
+
+    const [snippets] = await conn.query('SELECT * FROM snippets')
+    return { data: snippets, error: false }
   }
 
   // Recupera un snippet por su id
@@ -43,18 +73,6 @@ export class SnippetModel {
     )
     if (snippet.length === 0) return null
     return snippet[0]
-  }
-
-  // Recupera un snippet por su title
-  // No es seguro hay que hacer que llegue tambien
-  // el id del usuario sino pueden ver los de los demas
-  static async getByTitle ({ title }) {
-    const [snippets] = await conn.query(
-      'SELECT * FROM snippets WHERE title LIKE ?',
-      [`%${title}%`]
-    )
-    if (snippets.length === 0) return null
-    return snippets
   }
 
   // Crea un nuevo snippet en la base de datos
@@ -84,6 +102,6 @@ export class SnippetModel {
     )
 
     // Devolvemos el nuevo snippet
-    return { snippet: newSnippet, error: false }
+    return { data: newSnippet, error: false }
   }
 }
