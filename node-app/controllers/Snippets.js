@@ -26,4 +26,11 @@ export class SnippetController {
     if (newSnippet.error) return res.status(400).json({ message: newSnippet.message })
     return res.status(201).json(newSnippet.data)
   }
+
+  // Reemplazar un snippet
+  static async replaceSnippet (req, res) {
+    const newSnippet = await SnippetModel.replaceSnippet(req)
+    if (newSnippet.error) return res.status(400).json({ message: newSnippet.message })
+    return res.status(201).json(newSnippet.data)
+  }
 }

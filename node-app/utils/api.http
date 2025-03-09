@@ -1,5 +1,5 @@
 ### Get all snippets or quered
-GET http://localhost:3000/snippets?title=Python&&description=a
+GET http://localhost:3000/snippets
 ### Get a single snippet by id
 GET http://localhost:3000/snippets/8a41c75a-f8ac-11ef-a64c-0242ac120002
 
