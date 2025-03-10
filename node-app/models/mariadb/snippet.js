@@ -108,11 +108,15 @@ export class SnippetModel {
   // Reemplaza un snippet ya existente por id
   static async replaceSnippet (req) {
     const result = validateSnippet(req.body)
+    if (result.error) {
+      return { error: true, message: JSON.parse(result.error.message) }
+    }
     const { id } = req.params
-    const incomingSnippet = result.data
-    const replacedSnippet = await conn.query(
-      'UPDATE snippets SET title = ?, description = ?, lang = ?, code = ?',
-      []
+    const validatedSnippet = result.data
+    await conn.query(
+      'UPDATE snippets SET title = ?, description = ?, lang = ?, code = ? WHERE id = ?',
+      [validatedSnippet.title, validatedSnippet.description, validatedSnippet.lang, validatedSnippet.code, id]
     )
+    return { data: validatedSnippet, error: false }
   }
 }

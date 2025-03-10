@@ -16,8 +16,7 @@ snippetsRouter.post('/', SnippetController.create)
 // Reemplaza un snippet por id
 snippetsRouter.put('/:id', SnippetController.replaceSnippet)
 
-snippetsRouter.patch('/:id', (req, res) => {
-})
+snippetsRouter.patch('/:id', SnippetController.updateSnippet)
 
 snippetsRouter.delete('/:id', (req, res) => {
 })

@@ -16,13 +16,13 @@ Content-Type: application/json
 }
 
 ### Put a snippet
-PUT 
+PUT http://localhost:3000/snippets/5f63998e-fdff-11ef-af9c-0242ac130002
 Content-Type: application/json
 
 {
-  "id": "0297f8cb-f166-4494-9a26-0379ae046dfa",
-  "title": "Hello World in Python",
-  "code": "print('Hello, World!')",
-  "language": "Python",
-  "description": "A simple script to print 'Hello, World!'"
+  "user_id": "5f5d399a-fdff-11ef-af9c-0242ac130002",
+  "title": "Hola Mundo en Tu puta madre",
+  "description": "Un simple hola mundo en Python",
+  "lang": "Python",
+  "code": "print(\"Hola, mundo!\")"
 }
