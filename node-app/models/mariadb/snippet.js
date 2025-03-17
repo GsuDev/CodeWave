@@ -60,7 +60,7 @@ export class SnippetModel {
 
       return { data: snippets, error: false }
     }
-
+    // Si llega aquí es que quiere TODOS los snippets
     const [snippets] = await conn.query('SELECT * FROM snippets')
     return { data: snippets, error: false }
   }
