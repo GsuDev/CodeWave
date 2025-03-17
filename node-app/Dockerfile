@@ -6,4 +6,4 @@ COPY . /home/node-app/
 
 EXPOSE 3000
 
-CMD [ "node", "/home/app/app.js" ]
+CMD [ "node", "/home/app/server.js" ]

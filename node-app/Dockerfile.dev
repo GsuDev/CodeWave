@@ -6,4 +6,4 @@ WORKDIR /home/node-app
 
 EXPOSE 3000
 
-CMD [ "nodemon", "--legacy-watch", "app.js" ]
+CMD [ "nodemon", "--legacy-watch", "server.js" ]

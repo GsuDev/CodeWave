@@ -1,12 +1,12 @@
 {
     "name": "codewave",
     "version": "0.0.1",
-    "main": "app.js",
+    "main": "server.js",
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node app.js",
-        "devmon": "nodemon --legacy-watch app.js",
+        "start": "node server.js",
+        "devmon": "nodemon --legacy-watch server.js",
         "lint": "standard"
     },
     "repository": {
