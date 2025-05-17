@@ -2,11 +2,6 @@ import z from 'zod'
 
 // Usamos zod para validar los query params
 const querySchema = z.object({
-  user_id: z.string().nonempty(
-    { message: 'User id is required' }
-  ).uuid(
-    { message: 'Not valid uuid' }
-  ).optional(),
   title: z.string().nonempty(
     { message: 'Title is required' }
   ).max(100,

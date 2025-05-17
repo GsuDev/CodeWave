@@ -1,7 +1,6 @@
 ### Get all snippets or quered
-GET http://localhost:3000/snippets?id=
-### Get a single snippet by id
-GET http://localhost:3000/snippets/8a41c75a-f8ac-11ef-a64c-0242ac120002
+GET http://localhost:3000/snippets?id=cec7edfb-3244-11f0-9eba-0242ac120002
+
 
 ### Create a new snippet
 POST http://localhost:3000/snippets
@@ -9,8 +8,8 @@ Content-Type: application/json
 
 {
   "user_id": "1f073959-f9be-11ef-b248-0242ac130002",
-  "title": "",
-  "description": "",
+  "title": "jsjvwv",
+  "description": "ccwcwc",
   "lang": "astralopiteco",
   "code": "abracasumabra"
 }
@@ -25,4 +24,15 @@ Content-Type: application/json
   "description": "Un simple hola mundo en Python",
   "lang": "Python",
   "code": "print(\"Hola, mundo!\")"
+}
+
+### Delete a snippet
+DELETE http://localhost:3000/snippets/5f63998e-fdff-11ef-af9c-0242ac130002
+
+### Update a snippet
+PATCH http://localhost:3000/snippets/cec7f030-3244-11f0-9eba-0242ac120002
+Content-Type: application/json
+
+{
+  "lang44": "JavaScript"
 }

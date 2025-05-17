@@ -33,4 +33,11 @@ export class SnippetController {
     if (newSnippet.error) return res.status(400).json({ message: newSnippet.message })
     return res.status(201).json(newSnippet.data)
   }
+
+  // Actualizar un snippet
+  static async updateSnippet (req, res) {
+    const newSnippet = await SnippetModel.updateSnippet(req)
+    if (newSnippet.error) return res.status(400).json({ message: newSnippet.message })
+    return res.status(201).json(newSnippet.data)
+  }
 }

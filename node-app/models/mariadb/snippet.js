@@ -119,4 +119,38 @@ export class SnippetModel {
     )
     return { data: validatedSnippet, error: false }
   }
+
+  static async updateSnippet (req) {
+    const result = validateQuery(req.body)
+    if (result.error) {
+      return { error: true, message: JSON.parse(result.error.message) }
+    }
+
+    const { id } = req.params
+    const validatedSnippet = result.data
+
+    // Extraer las claves presentes
+    const fields = []
+    const values = []
+
+    for (const [key, value] of Object.entries(validatedSnippet)) {
+      fields.push(`${key} = ?`)
+      values.push(value)
+    }
+
+    if (fields.length === 0) {
+      return { error: true, message: 'No valid fields provided for update' }
+    }
+
+    values.push(id)
+    const query = `UPDATE snippets SET ${fields.join(', ')} WHERE id = ?`
+
+    const [resultDb] = await conn.query(query, values)
+
+    if (resultDb.affectedRows === 0) {
+      return { error: true, message: `Snippet with id ${id} not found` }
+    }
+
+    return { data: validatedSnippet, error: false }
+  }
 }
