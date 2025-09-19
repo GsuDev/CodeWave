@@ -1,15 +1,17 @@
 ### Get all snippets or quered
-GET http://localhost:3000/snippets?id=cec7edfb-3244-11f0-9eba-0242ac120002
+GET http://localhost:3000/snippets?title=hola
 
+### Get all snippets or quered
+GET http://localhost:3000/snippets
 
 ### Create a new snippet
 POST http://localhost:3000/snippets
 Content-Type: application/json
 
 {
-  "user_id": "1f073959-f9be-11ef-b248-0242ac130002",
-  "title": "jsjvwv",
-  "description": "ccwcwc",
+  "user_id": "37ccc528-3ba6-11f0-b1e2-0242ac120002",
+  "title": "",
+  "description": "",
   "lang": "astralopiteco",
   "code": "abracasumabra"
 }
